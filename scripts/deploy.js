@@ -1,0 +1,7 @@
+let router = {
+  uniswap: "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
+  sushiswap: "0xd9e1cE17f2641f24aE83637ab66a2cca9C378B9F",
+  shibaswap: "0x03f7724180AA6b939894B5Ca4314783B0b36b329",
+  sakeswap: "0x9C578b573EdE001b95d51a55A3FAfb45f5608b1f",
+  croswap: "0xCeB90E4C17d626BE0fACd78b79c9c87d7ca181b3",
+};
