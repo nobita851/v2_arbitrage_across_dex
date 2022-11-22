@@ -35,13 +35,13 @@ contract arbitrage is Ownable{
 		IUniswapV2Router02(router).swapExactTokensForTokens(_amount, 1, path, address(this), deadline);
 	}
 
-	function getAmountOutMin(address router, uint256 _amount) public view returns (uint256) {
+	function getAmountOut(address router, uint256 _amount) public view returns (uint256) {
 		address[] memory path;
 		path = new address[](2);
 		path[0] = token0;
 		path[1] = token1;
-		uint256[] memory amountOutMins = IUniswapV2Router02(router).getAmountsOut(_amount, path);
-		return amountOutMins[path.length -1];
+		uint256[] memory amountOut = IUniswapV2Router02(router).getAmountsOut(_amount, path);
+		return amountOut[amountOut.length - 1];
 	}
 
     function trade(address routerBuy, address routerSell) external{
